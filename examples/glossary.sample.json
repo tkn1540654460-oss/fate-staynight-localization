@@ -1,0 +1,10 @@
+{
+  "policy": "Use one canonical translation for every matched source term.",
+  "characters": [
+    {"source": "春子", "target": "春子"}
+  ],
+  "classes": [],
+  "terms": [
+    {"source": "魔術", "target": "魔术"}
+  ]
+}

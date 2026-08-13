@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ps-vita-localization-automation"
+version = "0.1.0"
+description = "Safe VitaShell FTP and reusable PS Vita localization pipeline tools"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "PS Vita 自动化汉化 contributors"}]
+keywords = ["ps-vita", "localization", "translation", "vitashell", "repatch"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+psvctl = "psvctl:main"
+
+[tool.setuptools]
+py-modules = ["psvctl"]
+

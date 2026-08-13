@@ -1,0 +1,2 @@
+{"id":"scene01:00001","script":"scene01","instruction_index":1,"sequence":1,"page":0,"command":"TEXT","source_template":"おはよう。@n","source_text":"おはよう。","translation":null}
+{"id":"scene01:00002","script":"scene01","instruction_index":2,"sequence":2,"page":0,"command":"TEXT","source_template":"今日はいい天気だ。^@n","source_text":"今日はいい天気だ。","translation":null}
