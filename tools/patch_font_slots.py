@@ -88,7 +88,10 @@ def patch_pixels(
         cell_x = (slot % COLUMNS) * CELL
         cell_y = (slot // COLUMNS) * CELL
         mask = render_glyph(character, font_path, font_size)
-        outline = mask.filter(ImageFilter.MaxFilter(5)) if has_colored_opaque else None
+        # The original 5x5 dilation produced a roughly two-pixel black border
+        # around injected Chinese glyphs.  In a 36x36 cell that overwhelms the
+        # white strokes and looks noticeably blockier than the native font.
+        outline = mask.filter(ImageFilter.MaxFilter(3)) if has_colored_opaque else None
         for y in range(CELL):
             for x in range(CELL):
                 coverage = mask.getpixel((x, y))
